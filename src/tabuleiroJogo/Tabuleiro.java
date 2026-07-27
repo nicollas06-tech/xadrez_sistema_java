@@ -3,7 +3,7 @@ package tabuleiroJogo;
 public class Tabuleiro {
     private int linhas;
     private int colunas;
-    private PecaXadrez [][] pecaXadrez;
+    private PecaJogo[][] pecaJogo;
 
    public Tabuleiro(){
        this.linhas=0;
@@ -13,7 +13,7 @@ public class Tabuleiro {
    public Tabuleiro(int linhas, int colunas){
        this.linhas=linhas;
        this.colunas=colunas;
-       pecaXadrez = new PecaXadrez[linhas][colunas];
+       pecaJogo = new PecaJogo[linhas][colunas];
    }
 
    public int getLinhas() {
@@ -32,11 +32,15 @@ public class Tabuleiro {
        this.colunas=colunas;
     }
 
-    public PecaXadrez pecaXadrez(int linhas, int colunas) {
-        return pecaXadrez[linhas][colunas];
+    public PecaJogo pecaXadrez(int linhas, int colunas) {
+        return pecaJogo[linhas][colunas];
     }
 
-    public PecaXadrez pecaXadrez (Posicao posicao){
-       return pecaXadrez[posicao.getlinha()][posicao.getcoluna()];
+    public PecaJogo pecaXadrez (Posicao posicao){
+       return pecaJogo[posicao.getlinha()][posicao.getcoluna()];
+    }
+    public void PosicionarPeca(PecaJogo peca, Posicao posicao){
+        pecaJogo[posicao.getlinha()][posicao.getcoluna()]= peca;
+        peca.posicao=posicao;
     }
 }

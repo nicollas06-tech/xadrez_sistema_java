@@ -1,10 +1,10 @@
 package camadaXadrez;
 
 import tabuleiroJogo.Tabuleiro;
-import tabuleiroJogo.PecaXadrez;
+import tabuleiroJogo.PecaJogo;
 
 
-public class PecaBase extends PecaXadrez{
+public class PecaBase extends PecaJogo {
     private Cor cor;
 
     public PecaBase(Tabuleiro tabuleiro,Cor cor){
