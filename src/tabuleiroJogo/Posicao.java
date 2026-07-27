@@ -2,37 +2,37 @@ package tabuleiroJogo;
 
 public class Posicao {
 
-    private int linhas;
-    private int colunas;
+    private int linha;
+    private int coluna;
 
     public Posicao(){
-        this.linhas=0;
-        this.colunas=0;
+        this.linha=0;
+        this.coluna=0;
     }
 
     public Posicao(int linhas, int colunas){
-        this.linhas=linhas;
-        this.colunas=colunas;
+        this.linha=linhas;
+        this.coluna=colunas;
     }
 
     public int getlinha(){
-        return linhas;
+        return linha;
     }
 
     public void setlinha(int linha){
-        this.linhas=linha;
+        this.linha=linha;
     }
 
-    public int coluna(){
-        return colunas;
+    public int getcoluna(){
+        return coluna;
     }
 
     public void setcoluna(int coluna){
-        this.colunas=coluna;
+        this.coluna=coluna;
     }
     @Override
     public String toString(){
-        return linhas +","+colunas;
+        return linha +","+coluna;
     }
 }
 
